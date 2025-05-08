@@ -34,7 +34,7 @@ public class CustomQueue<T> implements Queue<T> {
             throw new NoSuchElementException("The list is empty.");
         }
         T t = list.getFirst();
-        list.removeFirst();
+        list.removeLast();
         return t;
     }
 
@@ -44,7 +44,7 @@ public class CustomQueue<T> implements Queue<T> {
            return null;
        }
         T t = list.getFirst();
-        list.removeFirst();
+        list.removeLast();
         return t;
     }
 
