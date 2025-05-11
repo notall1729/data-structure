@@ -1,26 +1,33 @@
 package library;
 
+import datastructures.lists.CustomArrayList;
+import datastructures.stacks.CustomStack;
+
+import java.util.Stack;
+
 public class Member {
     private String memberId;
     private String name;
-    // TODO: Define a data structure to hold transactions of each member
+    private CustomArrayList<Transaction> transactions;
 
     public Member(String memberId, String name) {
         this.memberId = memberId;
         this.name = name;
-        // TODO: Initialize your data structure here
+        transactions = new CustomArrayList<>();
     }
 
     public String getMemberId() { return memberId; }
     public String getName() { return name; }
 
     public void addTransaction(Transaction transaction) {
-        // TODO
+        transactions.add(transaction);
     }
 
     public Transaction getLastTransaction() {
-        // TODO
-        return null;
+        if (transactions.isEmpty()) {
+            return null;
+        }
+        return transactions.get(transactions.size() - 1);
     }
 
     @Override
