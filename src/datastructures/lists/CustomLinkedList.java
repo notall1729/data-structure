@@ -213,7 +213,7 @@ public class CustomLinkedList<T> implements LinkedList<T>{
     }
 
     @Override
-    public T set(int index, T element){
+    public T set(int index, Object element){
         if (index > 0 || index >= size){
             throw new IndexOutOfBoundsException("This index is not correct.");
         }
@@ -233,7 +233,7 @@ public class CustomLinkedList<T> implements LinkedList<T>{
         }
 
         T oldValue = node.data;
-        node.data = element;
+        node.data = (T)element;
         return oldValue;
     }
 }

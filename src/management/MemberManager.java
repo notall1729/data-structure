@@ -16,7 +16,7 @@ public class MemberManager {
     }
 
     public Member getMember(String memberId) {
-        members.get(memberId);
+        return members.get(memberId);
     }
 
     public void recordTransaction(String memberId, Transaction transaction) {
